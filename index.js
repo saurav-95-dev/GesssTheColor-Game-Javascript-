@@ -2,6 +2,7 @@ let colorCodeContainer = document.getElementById("color-code");
 let optionContainer = document.getElementById("option-container");
 
 let randomColor = null;
+let score = 0;
 
 
 let generateRandomeNumberRGB = (min, max) => {
@@ -15,6 +16,10 @@ let generateRandomRGB = () => {
     let blue = generateRandomeNumberRGB(0, 255);
     return `rgb(${red} , ${green},${blue})`;
 
+}
+
+let incrementScore = () => {
+    score += 1;
 }
 
 //Value of generateRandomNumberRGB:
