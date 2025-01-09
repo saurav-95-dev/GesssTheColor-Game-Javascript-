@@ -4,7 +4,7 @@ let optionContainer = document.getElementById("option-container");
 let randomColor = null;
 let score = 0;
 
-
+// Generic function for generating random number between two numbers: 
 let generateRandomeNumberRGB = (min, max) => {
     return min + Math.floor(Math.random() * (max - min));
 }
