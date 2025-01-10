@@ -34,12 +34,17 @@ let validateResult = (e) => {
     if (selectedColor === randomColor.replaceAll(" ", "")) {
         incrementScore();
     }
+    else {
+        score -= 1;
+    }
+    window.localStorage.setItem("score", score);
     startGame();
 }
 
-
 //Start game function on reloading window ; 
 let startGame = () => {
+    score = Number(window.localStorage.getItem("score")) ?? 0;
+    scoreCount.innerText = score;
     optionContainer.innerHTML = null;
     randomColor = generateRandomRGB();
     colorCode.innerText = randomColor;
