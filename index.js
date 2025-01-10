@@ -60,6 +60,17 @@ let startGame = () => {
         div.style.width = "60px";
         div.style.margin = "5px";
         div.style.borderRadius = "10px";
+        div.style.cursor = "pointer";
+        div.style.transform = "scale(1)"; // Set initial scale
+        div.style.transition = "transform 0.4s"; 
+
+        // Add hover effect for scaling
+        div.addEventListener("mouseenter", () => {
+        div.style.transform = "scale(1.2)"; // Scale up on hover
+        });
+        div.addEventListener("mouseleave", () => {
+        div.style.transform = "scale(1)"; // Scale back to normal on mouse leave 
+        });
          // Set grid display for `optionContainer`
         optionContainer.style.display = "grid";
         optionContainer.style.gridTemplateColumns = "repeat(3, 0fr)"; // 3 columns
