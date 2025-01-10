@@ -60,6 +60,10 @@ let startGame = () => {
         div.style.width = "60px";
         div.style.margin = "5px";
         div.style.borderRadius = "10px";
+         // Set grid display for `optionContainer`
+        optionContainer.style.display = "grid";
+        optionContainer.style.gridTemplateColumns = "repeat(3, 0fr)"; // 3 columns
+        optionContainer.style.gap = "-10px"; // Spacing between items
 
         // Place `randomColor` in the `presentIndex` slot
         if (i === presentIndex) {
