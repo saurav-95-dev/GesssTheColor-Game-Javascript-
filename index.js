@@ -55,7 +55,7 @@ let validateResult = (e) => {
         }
 }
 
-//Start game function on reloading window ; 
+//Start game function on reloading window:
 let startGame = () => {
     score = Number(window.localStorage.getItem("score")) ?? 0;
     scoreCount.innerText = score;
