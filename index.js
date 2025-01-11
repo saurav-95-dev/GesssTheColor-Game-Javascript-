@@ -49,7 +49,7 @@ let validateResult = (e) => {
         document.body.innerHTML = "<h1>HAA HAA .. You lost old man !</h1>";
         document.body.style.color = "pink "
     }
-        // Only restart the game if the score is within the playable range
+        // Only restart the game if the score is within the playable range.
         if (score >= -2 && score < 5) {
             startGame();
         }
