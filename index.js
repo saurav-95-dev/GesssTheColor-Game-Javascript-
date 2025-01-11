@@ -27,6 +27,8 @@ console.log(generateRandomRGB());
 let incrementScore = () => {
     score += 1;
     scoreCount.innerText = score;
+   
+       
 }
 
 let validateResult = (e) => {
@@ -38,7 +40,19 @@ let validateResult = (e) => {
         score -= 1;
     }
     window.localStorage.setItem("score", score);
-    startGame();
+    if (score >= 5) {
+        document.body.innerHTML = "<h1>YOU WON. ...! <br>You are really lucky today</h1>";
+        document.body.style.color = "blue"
+
+    }
+    if (score < -2) {
+        document.body.innerHTML = "<h1>HAA HAA .. You lost old man !</h1>";
+        document.body.style.color = "pink "
+    }
+        // Only restart the game if the score is within the playable range
+        if (score >= -2 && score < 5) {
+            startGame();
+        }
 }
 
 //Start game function on reloading window ; 
@@ -89,3 +103,4 @@ let startGame = () => {
 
 //Reloading window to generate new color everytime by calling startGame function !
 window.addEventListener("load", startGame());
+
