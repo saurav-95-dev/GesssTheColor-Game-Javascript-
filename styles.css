@@ -102,4 +102,33 @@ body {
         height: 40px;
         border-radius: 5px;
     }
+   
 }
+#reset-btn {
+    padding: 5px 10px;
+    font-size: 15px;
+    background-color: #ff6c3b; /* Initial button color */
+    color: rgb(10, 10, 10);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    outline: none; /* Removes the focus border */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Elevated initial shadow */
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.2s;
+    margin-top: 8px;
+}
+
+/* Hover effect */
+#reset-btn:hover {
+    background-color: #0056b3; /* Darker color on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3); /* Slightly stronger shadow */
+}
+
+/* Active effect (click effect) */
+#reset-btn:active {
+    transform: scale(0.9); /* Noticeable shrink effect */
+    background-color: #004099; /* Further darken the button */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Strong and compressed shadow */
+}
+
+
