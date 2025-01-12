@@ -41,15 +41,105 @@ let validateResult = (e) => {
         score -= 1;
     }
     window.localStorage.setItem("score", score);
-    if (score >= 5) {
-        document.body.innerHTML = "<h1>YOU WON. ...! <br>You are really lucky today</h1>";
-        document.body.style.color = "blue"
 
-    }
-    if (score < -2) {
-        document.body.innerHTML = "<h1>HAA HAA .. You lost old man !</h1>";
-        document.body.style.color = "red"
-    }
+   // If the player wins
+   if (score >= 5) {
+    document.body.innerHTML = ""; // Clear previous content
+    
+    // Create a container div to align elements correctly
+    let container = document.createElement("div");
+    container.style.display = "flex";
+    container.style.flexDirection = "column";
+    container.style.alignItems = "center";
+    container.style.justifyContent = "center";
+    container.style.height = "100vh";
+
+    let message = document.createElement("h1");
+    message.innerText = "YOU WON . ..DAMM BR0 !";
+    message.style.color = "blue";
+    message.style.textAlign = "center"; // Center the message
+    container.append(message);
+
+    // Create and append Play Again button
+    let playAgainButton = document.createElement("button");
+    playAgainButton.className = "play-again-btn";
+    playAgainButton.textContent = "Play Again";
+    playAgainButton.style.marginTop = "20px"; // Add space below <h1>
+    playAgainButton.style.padding = "10px 20px";
+    playAgainButton.style.fontSize = "16px";
+    playAgainButton.style.border = "none";
+    playAgainButton.style.borderRadius = "8px";
+    playAgainButton.style.backgroundColor = "#007bff";
+    playAgainButton.style.color = "white";
+    playAgainButton.style.cursor = "pointer";
+    playAgainButton.style.transition = "background-color 0.2s";
+
+    // Button Hover Effect
+    playAgainButton.addEventListener("mouseenter", () => {
+        playAgainButton.style.backgroundColor = "#0056b3";
+    });
+    playAgainButton.addEventListener("mouseleave", () => {
+        playAgainButton.style.backgroundColor = "#007bff";
+    });
+
+    // Play Again Button Click Listener
+    playAgainButton.addEventListener("click", () => {
+        location.reload(); // Reloads the page to restart the game
+    });
+
+    container.append(playAgainButton); // Append the button after the message
+    document.body.append(container); // Append the container to the body
+}
+
+// If the player loses
+if (score < -2) {
+    document.body.innerHTML = ""; // Clear previous content
+    
+    // Create a container div to align elements correctly
+    let container = document.createElement("div");
+    container.style.display = "flex";
+    container.style.flexDirection = "column";
+    container.style.alignItems = "center";
+    container.style.justifyContent = "center";
+    container.style.height = "100vh";
+
+    let message = document.createElement("h1");
+    message.innerText = "HAA HAA ...You lost old man \n";
+    message.style.color = "blue";
+    message.style.textAlign = "center"; // Center the message
+    container.append(message);
+
+    // Create and append Play Again button
+    let playAgainButton = document.createElement("button");
+    playAgainButton.className = "play-again-btn";
+    playAgainButton.textContent = "Play Again";
+    playAgainButton.style.marginTop = "20px"; // Add space below <h1>
+    playAgainButton.style.padding = "10px 20px";
+    playAgainButton.style.fontSize = "16px";
+    playAgainButton.style.border = "none";
+    playAgainButton.style.borderRadius = "8px";
+    playAgainButton.style.backgroundColor = "#007bff";
+    playAgainButton.style.color = "white";
+    playAgainButton.style.cursor = "pointer";
+    playAgainButton.style.transition = "background-color 0.2s";
+
+    // Button Hover Effect
+    playAgainButton.addEventListener("mouseenter", () => {
+        playAgainButton.style.backgroundColor = "#0056b3";
+    });
+    playAgainButton.addEventListener("mouseleave", () => {
+        playAgainButton.style.backgroundColor = "#007bff";
+    });
+
+    // Play Again Button Click Listener
+    playAgainButton.addEventListener("click", () => {
+        location.reload(); // Reloads the page to restart the game
+    });
+
+    container.append(playAgainButton); // Append the button after the message
+    document.body.append(container); // Append the container to the body
+}
+
         // Only restart the game if the score is within the playable range.
         if (score >= -2 && score < 5) {
             startGame();
