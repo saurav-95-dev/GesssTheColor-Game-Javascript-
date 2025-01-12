@@ -3,13 +3,14 @@
 ## My Linkedin : https://www.linkedin.com/in/saurabh-dev-9120aa236/
 ## Follow me on my Instagram : https://www.instagram.com/sauravdev20002019/profilecard/?igsh=cnJsaGlqMnZjMm5h
 
-#### PROJECT :
-#### ACKNOWLEDGEMENTS :
+#### PROJECT : 
+Guess The Color Game 
+#### ACKNOWLEDGEMENTS : NONE
 #### DESCRIPTION :
 #### TECHNOLOGIES :
-HTML , CSS , Javascript
+HTML , CSS , Plane Javascript
 
-#### CONCEPTS AND BEST PRACTICES :
+#### CONCEPTS :
 Promises , API Calling , DOM Manipulation , gettingCurrentLocation .
 
 #### USAGE :
