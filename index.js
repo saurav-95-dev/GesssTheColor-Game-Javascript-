@@ -1,6 +1,7 @@
 let colorCode = document.getElementById("color-code");
 let optionContainer = document.getElementById("option-container");
 let scoreCount = document.getElementById("score");
+let resetButton = document.getElementById("reset-btn");
 
 let randomColor = null;
 let score = 0;
@@ -47,7 +48,7 @@ let validateResult = (e) => {
     }
     if (score < -2) {
         document.body.innerHTML = "<h1>HAA HAA .. You lost old man !</h1>";
-        document.body.style.color = "pink "
+        document.body.style.color = "red"
     }
         // Only restart the game if the score is within the playable range.
         if (score >= -2 && score < 5) {
@@ -103,4 +104,12 @@ let startGame = () => {
 
 //Reloading window to generate new color everytime by calling startGame function !
 window.addEventListener("load", startGame());
+
+
+//Resetting the game:
+resetButton.addEventListener("click", () => {
+    window.localStorage.setItem("score", 0);
+    startGame();
+
+})
 
